@@ -20,7 +20,7 @@ const rootRoute = new RootRoute({
         <Link to="/" className="[&.active]:font-bold">
           Home
         </Link>{" "}
-        <Link to="/about" className="[&.active]:font-bold">
+        <Link to="$postId" params={{ postId: '123' }} className="[&.active]:font-bold">
           About
         </Link>
       </div>
@@ -38,7 +38,7 @@ const indexRoute = new Route({
 
 const aboutRoute = new Route({
   getParentRoute: () => rootRoute,
-  path: "/about",
+  path: '$postId',
   component: About,
 });
 
